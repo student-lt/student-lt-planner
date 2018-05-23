@@ -42,7 +42,7 @@ function myFunction(e){
   message += "\n\n出席する: " + url
   
   //Googleカレンダーへの投稿
-  var calenderId = PropertiesService.getScriptProperties().getProperty('CALENDER_ID');
+  var calenderId = PropertiesService.getScriptProperties().getProperty('CALENDAR_ID');
   var objCalendar = CalendarApp.getCalendarById(calenderId);
   var objEvent = objCalendar.createEvent(cTitle,new Date(cDate),new Date(cEDate),{description:message}).setGuestsCanSeeGuests(false);
   
